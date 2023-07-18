@@ -140,6 +140,9 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/newsWebsocket/**", "anon");//CMS模块
         filterChainDefinitionMap.put("/vxeSocket/**", "anon");//JVxeTable无痕刷新示例
 
+        // テストの便利の為、一旦 /smartlocker/ 系への検証を外す。TODO: 後でここらへん考慮しないといけない
+        filterChainDefinitionMap.put("/smartlocker/**", "anon");
+
         //性能监控——安全隐患泄露TOEKN（durid连接池也有）
         //filterChainDefinitionMap.put("/actuator/**", "anon");
         //测试模块排除
